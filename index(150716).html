@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>IKOS</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/tables.css" rel="stylesheet">
+	<link href="css/ikos.css" rel="stylesheet">
+	<link href="dist/css/ripples.min.css" rel="stylesheet">
+	<link href="css/bootstrap-material-design.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- SCRIPTS -->
+    <!-- jQuery needs to be in header for sorting to work  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+	<script>
+  	$(document).ready(function(){
+    $(".GaugeMeter").gaugeMeter();
+  	});
+	</script>
+    <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.js"></script>
+    
+<script type="text/javascript">
+	jQuery( document ).ready(function($){ 
+	$( ".GaugeMeter" ).addClass( "center-block" );
+	$( "td > a > .hendelser-icon").parent().addClass( "text-center" );
+	$( "td > button").parent().addClass("text-center");
+	});
+	
+</script>
+    
+    <script>
+    $(document).ready(function() 
+        { 
+            $(".dataTable").tablesorter(); 
+        } 
+    );
+    </script>
+    
+
+  </head>
+  <body>
+
+<!-- MODAL -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><strong>Kalender:</strong> Anne Andersen (K 77, EPJ 33)</h4>
+      </div>
+      <div class="modal-body">
+	<div class="small-cal-item">
+	<h4>Fall</h4><i class="material-icons float-right">warning</i>
+	<p>Proin at ullamcorper felis. Fusce laoreet, nulla eu porttitor.</p>
+	</div><!-- small-cal-item -->
+		<div class="small-cal-item">
+	<h4>Fall</h4><i class="material-icons float-right">warning</i>
+	<p>Etiam iaculis, ante eget malesuada finibus.</p>
+	</div><!-- small-cal-item -->
+		<div class="small-cal-item">
+	<h4>Vold</h4><i class="material-icons float-right">warning</i>
+	<p>Morbi et magna quis ex imperdiet fermentum</p>
+	</div><!-- small-cal-item -->
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-tavle btn-primary" data-dismiss="modal">Utforsk</button>
+        <button type="button" class="btn btn-tavle btn-default" data-dismiss="modal">Steng</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="container-fluid">
+  	<div class="row">
+  	<div class="col-lg-12 gmd-header-branding"><img class="ikos-branding" src="img/ikos.png"><h1>Midtåsenhjemmet - Sentrum s.hj - Avd: Syd</h1> <h4 class="logged-user">Innlogget: Elin Eng</h4></div>
+  		<div class="col-lg-12 gmd-header">
+  					<div class="gmd-main-navbar">
+  						<ul>
+  							<li><a class="current" href="#">Brukertavle</a></li>
+  							<li><a href="#">Brukerkort</a></li>
+  							<li><a href="persontavle/persontavle.html">Personaltavle</a></li>
+  							<li><a href="#">Brukerregister</a></li>
+  							<li><a href="#">Personalregister</a></li>
+  						</ul>
+  					</div>
+  		</div>
+
+  	</div>
+  	</div>
+  	
+  	<div class="row">
+  	<div class="col-lg-12 main-content brukertavle">
+  	<button class="btn btn-info btn-sm pull-left">Vis aktive</button>
+  	  	<button class="btn btn-info btn-sm pull-left">Vis alle</button>
+    <table class="dataTable tablesorter" cell-spacing="0" width="100%">
+      <col>
+      <thead>
+        <tr class="second_level">
+          <th scope="col"><i class="material-icons">visibility_off</i></th>
+          <th scope="col">EPJ</th>
+          <th scope="col">Fornavn</th>
+		  <th scope="col">Etternavn</th>
+          <th scope="col">Alder</th>
+          <th scope="col">Kj</th>
+		  <th scope="col">Iverksatt</th>
+		  <th scope="col">Avslutt</th>
+          <th scope="col"><img class="brukertavle-helse-icon" src="img/icons/ikos-icon-01.png"></th>
+          <th scope="col">Frist vurdering</th>
+          <th scope="col">Plan</th>
+          <th scope="col">Kartlegging</th>
+          <th scope="col">Hjelpemidler</th>
+          <th scope="col">Tjeneste</th>
+          <th scope="col">Ansvar</th>
+          <th scope="col">TA</th>
+          <th scope="col">PK</th>
+          <th scope="col">Hendelser</th>
+          <th scope="col">
+		<ul class="brukertavle-cal">
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li class="cal-holiday">23</li>
+        <li class="cal-holiday">24</li>
+        <li>25</li>
+        <li>26</li>
+        </ul>
+
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+      	<td><i class="material-icons">check_box_outline_blank</i></td>
+        <td>33</td>
+        <td>****</td>
+	    <td>****</td>
+        <td>77</td>
+        <td>K</td>
+        <td>01.01.16</td>
+        <td>01.01.16</td>
+        <td class="status-type-1">100%</td>
+        <td>28.07.16</td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>MaST</td>
+        <td>PeGa</td>
+		<td></td>
+        <td>
+        <ul class="brukertavle-cal">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        </ul>
+</td>
+      </tr>
+      
+      <tr>
+       	<td><i class="material-icons">check_box</i></td>
+        <td>34</td>
+        <td>Berit</td>
+        <td>Blom</td>   
+        <td>83</td>
+        <td>K</td>
+        <td>01.01.16</td>
+        <td>01.01.16</td>        
+        <td class="status-type-2">10%</td>
+        <td>08.08.16</td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td>TDM</td>
+        <td>PeGa</td>
+		<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="material-icons hendelser-icon">warning</i></a></td>
+        <td>
+        <ul class="brukertavle-cal">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        </ul>
+		</td>
+      </tr>
+
+      <tr>
+       	<td><i class="material-icons">check_box</i></td>
+        <td>35</td>
+        <td>Carl</td>
+        <td>Carlsen</td>
+        <td>86</td>
+        <td>M</td>
+        <td>01.01.16</td>
+        <td>01.01.16</td>        
+        <td class="status-type-3">30%</td>
+        <td>13.08.16</td>
+        <td>MaST<br>08.07.16</td>
+        <td>MaST<br>08.07.16</td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td><div class="GaugeMeter" id="GaugeMeter_1" data-percent="10" data-append="%" data-size="50" data-color="#fff" data-back="RGBa(215,0,34,1)" data-width="4"</div></td>
+        <td>MaST<br>08.07.16</td>
+        <td>MaST</td>
+        <td>NiPe</td>
+		<td>&nbsp;</td>        
+        <td>
+        <ul class="brukertavle-cal">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        </ul>
+        </td>
+      </tr>
+      
+      <tr>
+       	<td><i class="material-icons">check_box</i></td>
+        <td>40</td>
+        <td>Hilde</td>
+        <td>Hanse</td>
+        <td>95</td>
+        <td>K</td>
+        <td>01.01.16</td>
+        <td>01.01.16</td>        
+        <td class="status-type-5">80%</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+		<td>&nbsp;</td>
+        <td>
+        <ul class="brukertavle-cal">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        </ul>
+</td>
+      </tr>
+      
+      <tr>
+       	<td><i class="material-icons">check_box</i></td>
+        <td>41</td>
+        <td>Ivar</td>
+        <td>Iversen</td>
+        <td>102</td>
+        <td>M</td>
+        <td>01.01.16</td>
+        <td>01.01.16</td>                
+        <td class="status-type-4">45%</td>
+        <td>24.07.16</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Pause</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+		<td>&nbsp;</td>
+        <td>
+        <ul class="brukertavle-cal">
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li><i class="material-icons brukertavle-cal-dot">lens</i></li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        </ul>
+
+        </td>
+      </tr>
+      
+
+    </tbody>
+    </table>
+        	<div class="brukertavle-nav">
+    	  <nav>
+  <ul class="pagination pagination-sm float-right">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+    	</div>
+    	</div> <!-lol->
+
+    	</div>
+  	</div>
+  	
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://use.typekit.net/qww2ftv.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="js/bootstrap.min.js"></script>
+			<script src="dist/js/ripples.min.js"></script>
+			<script src="dist/js/material.min.js"></script>
+			<script>$.material.init()</script>
+  </body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>IKOS</title><!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/tables.css" rel="stylesheet">
+	<link href="../css/ikos.css" rel="stylesheet">
+	<link href="../css/bootstrap-material-design.css" rel="stylesheet">
+	<link href="../dist/css/ripples.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=
+	"stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- SCRIPTS -->
+	<!-- jQuery needs to be in header for sorting to work  -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="../js/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+	<script>
+  	$(document).ready(function(){
+    $(".GaugeMeter").gaugeMeter();
+  	});
+	</script>
+	
+</head>
+<body>
+
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><strong>Kalender:</strong> Anne Andersen (K 77, EPJ 33)</h4>
+      </div>
+      <div class="modal-body">
+	<div class="small-cal-item small-cal-item-alert">
+	<h4>Lorem ipsum dolor sit amet</h4><i class="material-icons float-right">warning</i>
+	<p>Proin at ullamcorper felis. Fusce laoreet, nulla eu porttitor.</p>
+	</div><!-- small-cal-item -->
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-tavle btn-primary" data-dismiss="modal">Utforsk</button>
+        <button type="button" class="btn btn-tavle btn-default" data-dismiss="modal">Steng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	<!-- MODAL -->
+	<div aria-labelledby="myModalLabel" class="modal fade" id="myModal2" role=
+	"dialog" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content modal-content-ikos">
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Ny avtale</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Tittel</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="Tittel" class="form-control input-md" required="">
+  <span class="help-block">Fyll inn tittel</span>  
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Kommentar</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea">Kommentar</textarea>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Start</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">09:00</option>
+      <option value="2">10:00</option>
+      <option value="3">osv</option>
+    </select>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Slutt</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">09:00</option>
+      <option value="2">10:00</option>
+      <option value="3">osv</option>
+    </select>
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Regelmessighet</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      En gang
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      Daglig
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="3">
+      Ukentlig
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-3">
+      <input type="radio" name="radios" id="radios-3" value="4">
+      Månedlig
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-4">
+      <input type="radio" name="radios" id="radios-4" value="5">
+      Årlig
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Multiple Checkboxes (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Skje hver:</label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      Mandag
+    </label>
+    <label class="checkbox-inline" for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Tirsdag
+    </label>
+    <label class="checkbox-inline" for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+      Onsdag
+    </label>
+    <label class="checkbox-inline" for="checkboxes-3">
+      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+      Torsdag
+    </label>
+    <label class="checkbox-inline" for="checkboxes-4">
+      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
+      Fredag
+    </label>
+    <label class="checkbox-inline" for="checkboxes-5">
+      <input type="checkbox" name="checkboxes" id="checkboxes-5" value="6">
+      Lørdag
+    </label>
+    <label class="checkbox-inline" for="checkboxes-6">
+      <input type="checkbox" name="checkboxes" id="checkboxes-6" value="7">
+      Søndag
+    </label>
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="button1id">Valg</label>
+  <div class="col-md-8">
+    <button id="button1id" name="button1id" class="btn btn-success">Opprett</button>
+    <button id="button2id" name="button2id" class="btn btn-danger">Avbryt</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 gmd-header-branding">
+				<img class="ikos-branding" src="../img/ikos.png">
+				<h1>Midtåsenhjemmet - Sentrum s.hj - Avd: Syd</h1>
+				<h4 class="logged-user">Innlogget: Elin Eng</h4>
+			</div>
+			<div class="col-lg-12 gmd-header">
+				<div class="gmd-main-navbar">
+					<ul>
+						<li>
+							<a href="#">Brukertavle</a>
+						</li>
+						<li>
+							<a class="current" href="#">Brukerkort</a>
+						</li>
+						<li>
+							<a href="persontavle/persontavle.html">Personaltavle</a>
+						</li>
+						<li>
+							<a href="#">Brukerregister</a>
+						</li>
+						<li>
+							<a href="#">Personalregister</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 main-content">
+		<div class="col-lg-12">
+		<div class="panel panel-default panel-user-info">
+  		<div class="panel-heading">Personalia</div>
+  		<div class="panel-body">
+    	<ul>
+    	<li>EPJ: 34</li>
+    	<li>Berit Blom</li>
+    	<li>27.04.16</li>
+    	<li>78</li>
+    	<li>K</li>
+    	</ul>
+  		</div>
+		</div>
+		</div>		
+		<div class="col-lg-6">
+		<div class="panel panel-default">
+  		<div class="panel-heading panel-brukerkort-heading">Helse/livsstil <div class="tmp-status">50%</div></div>
+  		<div class="panel-body">
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Status</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">Funksjonsfeil</option>
+      <option value="2">Stabil</option>
+      <option value="">Kompleks - Moderat</option>
+    </select>
+  </div>
+</div>
+</fieldset>
+</form>
+
+
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>
+
+ 		</div>
+		</div>
+		</div><!-- panel end -->
+
+		<div class="col-lg-6">
+		<div class="panel panel-default">
+  		<div class="panel-heading panel-brukerkort-heading">Plan</div>
+  		<div class="panel-body">
+ <table width="100%;" cellpadding="10" class="dataTable" cell-spacing="0">
+  <tbody>
+	<thead>
+    <tr class="first_level">
+      <th>Plan</th>
+      <th>&nbsp;</th>
+      </tr>
+    <tr class="second_level">
+      <th>Sjekklister</th>
+      <th>Velg aktuelle</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Tiltaksplan start</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Krise/mestringsplan</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>    </tr>
+    <tr>
+      <td>Behandlingsavklaring</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td> </tr>
+	</tbody>
+	</table>
+
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>
+  		</div>
+		</div>
+		</div><!-- panel end -->
+		
+		<div class="col-lg-12">&nbsp;</div>
+						
+		<div class="col-lg-6">
+		<div class="panel panel-default">
+  		<div class="panel-heading panel-brukerkort-heading">Kartlegging</div>
+  		<div class="panel-body">
+ <table width="100%;" cellpadding="10" class="dataTable" cell-spacing="0">
+  <tbody>
+	<thead>
+    <tr class="first_level">
+      <th>Kartlegging</th>
+      <th>&nbsp;</th>
+      </tr>
+    <tr class="second_level">
+      <th>Sjekklister</th>
+      <th>Velg aktuelle</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>IPLOS</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Samtykkevurdering</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+    </td>    </tr>
+    <tr>
+      <td>LMG</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+    </td> </tr>
+	</tbody>
+	</table>
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+ <table width="100%;" cellpadding="10" class="dataTable" cell-spacing="0">
+  <tbody>
+	<thead>
+    <tr class="first_level">
+      <th>IPLOS</th>
+      <th>&nbsp;</th>
+      </tr>
+    <tr class="second_level">
+      <th>Sjekkpunkter</th>
+      <th>Utført</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Sjekkpunkt 1</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Sjekkpunkt 2</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+    </td>    </tr>
+    <tr>
+      <td>
+      <div class="form-group">
+      <div class="col-lg-4">
+  <input type="text" class="form-control" placeholder="Skår">
+</div></div>
+      </td>
+      <td>
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>    </td> </tr>
+	</tbody>
+	</table>
+		</div>
+		</div>
+		</div><!-- panel end -->
+		
+		<div class="col-lg-6">
+		<div class="panel panel-default">
+  		<div class="panel-heading panel-brukerkort-heading">Hjelpemidler</div>
+  		<div class="panel-body">
+ <table width="100%;" cellpadding="10" class="dataTable" cell-spacing="0">
+  <tbody>
+	<thead>
+    <tr class="first_level">
+      <th>Hjelpemidler</th>
+      <th>&nbsp;</th>
+      </tr>
+    <tr class="second_level">
+      <th>Sjekklister</th>
+      <th>Velg aktuelle</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Blærekateter</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Sentralt venekateter</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>    </tr>
+    <tr>
+      <td>Høreaparat</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td> </tr>
+	</tbody>
+	</table>
+
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>
+
+ <table width="100%;" cellpadding="10" class="dataTable" cell-spacing="0">
+  <tbody>
+	<thead>
+    <tr class="first_level">
+      <th>Blærekateter</th>
+      <th>&nbsp;</th>
+      </tr>
+    <tr class="second_level">
+      <th>Sjekkpunkter</th>
+      <th>Utført</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Sjekkpunkt 1</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Sjekkpunkt 2</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>    </tr>
+    <tr>
+      <td><div class="dropdown">
+  <button class="btn btn-raised btn-info btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Velg ansvarlig
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Person 1</a></li>
+    <li><a href="#">Person 2</a></li>
+    <li><a href="#">Person 3</a></li>
+  </ul>
+</div></td>
+      <td>
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>
+      </td> </tr>
+	</tbody>
+	</table>
+
+
+  		</div>
+		</div>
+		</div><!-- panel end -->
+		
+		<div class="col-lg-12">&nbsp;</div>
+		
+		<div class="col-lg-12">
+		<div class="panel panel-default">
+  		<div class="panel-heading panel-brukerkort-heading">Tjeneste</div>
+  		<div class="panel-body">
+  		
+ <table width="100%;" cellpadding="10" class="dataTable" cell-spacing="0">
+  <tbody>
+	<thead>
+    <tr class="first_level">
+      <th>Tjeneste</th>
+      <th>&nbsp;</th>
+      </tr>
+    <tr class="second_level">
+      <th>Sjekklister</th>
+      <th>Velg aktuelle</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Hovedtjeneste hos oss</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Rus- og psykisk helsetjeneste</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td>    </tr>
+    <tr>
+      <td>LSD Livets siste dager</td>
+      <td>
+      <div class="togglebutton">
+      <label><input type="checkbox" checked=""></label>
+      </div>
+      </td> </tr>
+	</tbody>
+	</table>
+
+<button class="btn btn-raised btn-info btn-sm pull-right">Lagre</button>
+
+  		</div>
+		</div>
+		</div><!-- panel end -->		
+		
+		</div><!-- main-content -->
+	</div>
+			<script src="https://use.typekit.net/qww2ftv.js">
+			</script>
+			<script>
+			 try{Typekit.load({ async: true });}catch(e){}
+			</script>
+			<script src="../js/bootstrap.min.js"></script>
+			<script src="../dist/js/ripples.min.js"></script>
+			<script src="../dist/js/material.min.js"></script>
+			<script>$.material.init()</script>
+
+</body>
+
+</html>
