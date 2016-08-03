@@ -799,3 +799,8 @@ li.user-info-detail-lol {
 	text-align: center;
 	width: 200px;
 }
+
+
+body {
+	color: red !important;
+}
